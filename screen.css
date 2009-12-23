@@ -1,0 +1,65 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 13px;
+	background-color: #000;
+	color: #999;
+}
+
+#container {
+	width: 600px;
+	margin:0 auto;
+	padding:0 3em;
+	background: black;
+
+	text-align: center;
+}
+
+#filter {
+	text-align: center;
+	padding: 30px 0;
+}
+
+html, body, #container { height: 100%; }
+#container { height: auto; min-height: 100%; }
+#content { padding-bottom: 4em; }
+
+#footer {
+	width: 800px;
+	margin: 0 auto;
+	background-color: #ccc;
+
+	position: relative;
+	margin-top: -4em;
+	height: 4em;
+	clear:both;
+}
+
+input {
+	font-size:12px;
+	width:250px;
+	padding:3px;
+	color:#666;
+}
+
+.entry {
+	margin: 10px 0;
+	padding: 10px;
+	border: 2px solid #222;
+
+	text-align: left;
+}
+
+.id {
+	float:right;
+}
+
+.message {
+	font-size: 14px;
+	margin: 2px 0;
+}

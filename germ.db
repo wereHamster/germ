@@ -1,0 +1,13 @@
+[
+  {
+    "id": "git-0001", "message": "fatal: Entry 'frotz' not uptodate. Cannot merge.",
+    "description": "Merge failed because the file 'frotz' has local modifications",
+    "action": "Commit your local changes or use git-stash(1)."
+  },
+
+  {
+    "id": "git-0002", "message": "unable to chdir or not a git archive",
+    "description": "Git was unable to find a git repository under the supplied path.",
+    "action": "Check the path and see if you have permissions to access the repository."
+  }
+]
