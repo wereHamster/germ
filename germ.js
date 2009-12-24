@@ -8,6 +8,16 @@ function manify(string) {
 	return string.replace(/(git[-\w]*)(\(\d\))/, link)
 }
 
+function filterErrorMessages(value) {
+	$('.entry').each(function() {
+		var elt = $(this);
+		if (value.length > 0 && elt.text().match(new RegExp(value)))
+			elt.show()
+		else
+			elt.hide()
+	})
+}
+
 function __load() {
 	$.ajax({
 		type: 'GET', url: 'germ.db', dataType: 'json',
@@ -34,20 +44,15 @@ function __load() {
 					}
 				)
 			})
-		}, error: error
-	})
-}
 
-function filterErrorMessages(value) {
-	$('.entry').each(function() {
-		var elt = $(this);
-		if (value.length > 0 && elt.text().match(new RegExp(value)))
-			elt.show()
-		else
-			elt.hide()
+			filterErrorMessages($('input').val())
+		}, error: error
 	})
 }
 
 $('document').ready(function() {
 	__load()
+
+	var url = window.location.toString().match(/\?(.+)$/)
+	$('input').val(RegExp.$1)
 });
