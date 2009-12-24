@@ -3,6 +3,11 @@ function error(req, status, err) {
 	$('#content').text('An error occurred while processing the request ('+err+', '+req.status+')')
 }
 
+function manify(string) {
+	var link = '<a href="http://www.kernel.org/pub/software/scm/git/docs/$1.html">$1$2</a>'
+	return string.replace(/(git[-\w]*)(\(\d\))/, link)
+}
+
 function __load() {
 	$.ajax({
 		type: 'GET', url: 'germ.db', dataType: 'json',
@@ -15,7 +20,7 @@ function __load() {
 				$('<div class="description"/>').text('Description: '+data.description).appendTo(message)
 
 				var expand = $('<div class="expand"/>').hide().appendTo(message)
-				$('<div class="action"/>').text('Action: '+data.action).appendTo(expand)
+				$('<div class="action"/>').html('Action: '+manify(data.action)).appendTo(expand)
 
 				message.appendTo('#content')
 				message.hover(

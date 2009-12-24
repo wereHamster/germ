@@ -11,6 +11,10 @@ body {
 	color: #999;
 }
 
+a {
+	color: #797;
+}
+
 #container {
 	width: 600px;
 	margin:0 auto;
