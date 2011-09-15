@@ -12,7 +12,7 @@ function filter(value) {
   var count = 0;
 	$('.entry').each(function() {
 		var elt = $(this);
-		if (value.length > 0 && elt.text().match(new RegExp(value)) && ++count < 6)
+		if (value.length > 0 && elt.text().match(new RegExp(value, 'i')) && ++count < 6)
 			elt.show()
 		else
 			elt.hide()
