@@ -1,28 +1,28 @@
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-family: 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 14px;
-	font-weight: 200;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 200;
 
-	background: url(/images/bg.tile.jpg);
-	color: #666;
+  background: url(/images/bg.tile.jpg);
+  color: #666;
 }
 
 a {
-	color: #797;
+  color: #797;
 }
 
 #container {
-	width: 600px;
-	margin:0 auto;
-	padding:0 3em;
+  width: 600px;
+  margin:0 auto;
+  padding:0 3em;
 
-	text-align: center;
+  text-align: center;
 }
 
 h1 {
@@ -48,8 +48,8 @@ h1 span {
 }
 
 #filter {
-	text-align: center;
-	padding: 15px 0 30px;
+  text-align: center;
+  padding: 15px 0 30px;
 }
 
 html, body, #container { height: 100%; }
@@ -61,45 +61,58 @@ input {
   font-weight: 200;
   font-family: "Helvetica Neue", Helvetica;
 
-	width:450px;
-	padding: 8px 14px 9px;
-	color:#666;
+  width:450px;
+  padding: 8px 14px 9px;
+  color:#666;
 
-	border-radius: 3px;
-	border: 1px solid #ccc;
+  border-radius: 3px;
+  border: 1px solid #ccc;
 
-	box-shadow: 0 0 2px #ddd inset;
-	outline: none;
+  box-shadow: 0 0 2px #ddd inset;
+  outline: none;
 }
 
 .entry {
   position: relative;
-	margin: 10px 0;
-	padding: 10px;
-	border: 1px solid #ddd;
-	background: white;
-	box-shadow: 0 0 2px #ddd inset;
+  margin: 10px;
 
+  border: 1px solid #ddd;
+  background: white;
+  box-shadow: 0 0 2px #ccc inset;
 
-	text-align: left;
+  text-align: left;
 
   border: 1px solid #ccc;
-	border-radius: 4px;
+  border-radius: 4px;
 }
 
-h2 {
+.entry > * {
+  padding: 10px;
+}
+
+.entry > h2 {
+  margin: 0;
+  padding: 5px 10px;
+  height: 18px;
+
   font-weight: 200;
   font-size: 16px;
   border-bottom: 1px solid #ccc;
+
   color: #444;
+  background-image: -webkit-linear-gradient(top, #f1f1f1, #e1e1e1);
+  border-radius: 4px 4px 0 0;
 }
 
 .id {
-	position: absolute;
-	top: 2px; right: 2px;
-	font-weight: 200;
+  float: left;
 
-  padding: 2px 6px 3px;
+  margin: 0 6px 0 0;
+  padding: 5px 8px;
+  height: 18px;
+
+  font-weight: 200;
+
   display: inline-block;
   color: #333;
   text-shadow: 1px 1px 0 white;
@@ -107,26 +120,51 @@ h2 {
   border: none;
   overflow: visible;
   cursor: pointer;
-  border: 1px solid #D4D4D4;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background: #F4F4F4;
-  background: -webkit-gradient(linear, left top, left bottom, from(#F4F4F4), to(#ECECEC));
-  background: -moz-linear-gradient(top, #F4F4F4, #ECECEC);
+  border-right: 1px solid #c1c1c1;
+  background-image: -webkit-linear-gradient(top, #e1e1e1, #d1d1d1);
+  border-radius: 3px 0 0 0;
 }
 
 .id:hover {
   color: white;
   text-decoration: none;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.30);
-  border-color: #518CC6;
-  border-bottom-color: #2A65A0;
-  background: #599BDC;
-  background: -webkit-gradient(linear, left top, left bottom, from(#599BDC), to(#3072B3));
-  background: -moz-linear-gradient(top, #599BDC, #3072B3);
+  border-color: #629ED9;
+  background: #83B9EE;
+  background: -webkit-gradient(linear, left top, left bottom, from(#83B9EE), to(#629ED9));
+}
+
+.version {
+  display: inline-block;
+
+  opacity: 0;
+  visibility: none;
+
+  -webkit-transition: opacity 0.2s ease-in-out;
+
+  position: absolute;
+  top: 3px; right: 3px;
+
+  margin: 0;
+  padding: 1px 6px 2px;
+
+  border: 1px solid #bbb;
+  border-radius: 2px;
+
+  color: #333;
+  text-shadow: 1px 1px 0 white;
+  white-space: nowrap;
+  overflow: visible;
+  background-image: -webkit-linear-gradient(top, #e1e1e1, #d1d1d1);
+
+  box-shadow: 0 0 2px #ccc inset;
+}
+
+.entry:hover .version {
+  opacity: 1;
+  visibility: visible;
 }
 
 .message {
-	margin: 2px 0;
+  margin: 2px 0;
 }

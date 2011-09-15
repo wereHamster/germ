@@ -19,6 +19,14 @@ function filter(value) {
 	})
 }
 
+function version(v) {
+  if (v.length === 1) {
+    return v[0] + ' and later';
+  } else {
+    return v[0] + ' - ' + v[1];
+  }
+}
+
 function __load() {
   console.log('loaded')
 
@@ -28,8 +36,11 @@ function __load() {
 			$.each(data, function(val, data) {
 				var message = $('<div href="#repo" class="entry"/>')
 
-				$('<span class="id"/>').text('id:'+data.id).appendTo(message)
-				$('<h2 class="message"/>').text(data.message).appendTo(message)
+				$('<span class="id"/>').text(data.id).appendTo(message)
+				var $header = $('<h2 class="message"/>').text(data.message)
+				$header.appendTo(message);
+
+				$('<span class="version"/>').text(version(data.version)).appendTo(message)
 				$('<div class="description"/>').html(manify(data.description)).appendTo(message)
 
 				message.appendTo('#content')

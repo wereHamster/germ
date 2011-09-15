@@ -1,21 +1,21 @@
 [
   {
-    "id": "52427", "message": "fatal: Entry '<file>' not uptodate. Cannot merge.",
+    "id": "24283", "version": [ "1.4.0" ], "message": "fatal: Entry '<file>' not uptodate. Cannot merge.",
     "description": "Merge failed because one or more files has local modifications. Either commit your local changes or use git-stash(1)."
   },
 
   {
-    "id": "13478", "message": "unable to chdir or not a git archive",
+    "id": "13478", "version": [ "1.2.0", "1.4.5" ], "message": "unable to chdir or not a git archive",
     "description": "Git was unable to find a git repository under the supplied path. Check the path and see if you have permissions to access the repository."
   },
 
   {
-    "id": "82475", "message": "You appear to have cloned an empty repository.",
+    "id": "82475", "version": [ "1.1.3" ], "message": "You appear to have cloned an empty repository.",
     "description": "The repository you just cloned doesn't have any commits yet. You can now do the initial import of your source code and commit it."
   },
 
   {
-    "id": "72573", "message": "A branch named '<branch>' already exists.",
+    "id": "72573", "version": [ "1.7.6.2" ], "message": "A branch named '<branch>' already exists.",
     "description": "A branch you tried to create already exists. Pick a different name for the new branch."
   }
 ]
