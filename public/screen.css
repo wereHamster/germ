@@ -57,6 +57,12 @@ h1 span {
   padding: 15px 0 15px;
 }
 
+#filter > p {
+  margin: 0 auto 20px;
+  width: 570px;
+  text-align: left;
+}
+
 html, body, #container { height: 100%; }
 #container { height: auto; min-height: 100%; }
 #content { padding: 15px 0; }
