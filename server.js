@@ -15,5 +15,5 @@ app.get('/id/:id',  function(req, res) {
   res.sendfile(__dirname + '/public/index.html');
 });
 
-app.listen(3000);
+app.listen(parseInt(process.env.PORT) || 3000);
 
