@@ -11,8 +11,10 @@
 </head>
 <body>
   <div id="container">
+    <h1><a href='/'>the <span>G</span>it <span>ER</span>ror <span>M</span>essage database</a></h1>
+
     <div id="filter">
-      <input onchange="filterErrorMessages(this.value);" onkeyup="filterErrorMessages(this.value);"/>
+      <input placeholder="search..." autofocus onchange="filter(this.value);" onkeyup="filter(this.value);"/>
     </div>
     <div id="content">
     </div>

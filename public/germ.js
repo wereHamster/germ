@@ -8,10 +8,11 @@ function manify(string) {
 	return string.replace(/(git[-\w]*)(\(\d\))/, link)
 }
 
-function filterErrorMessages(value) {
+function filter(value) {
+  var count = 0;
 	$('.entry').each(function() {
 		var elt = $(this);
-		if (value.length > 0 && elt.text().match(new RegExp(value)))
+		if (value.length > 0 && elt.text().match(new RegExp(value)) && ++count < 6)
 			elt.show()
 		else
 			elt.hide()
@@ -19,33 +20,22 @@ function filterErrorMessages(value) {
 }
 
 function __load() {
+  console.log('loaded')
+
 	$.ajax({
 		type: 'GET', url: 'germ.db', dataType: 'json',
 		success: function(data) {
 			$.each(data, function(val, data) {
 				var message = $('<div href="#repo" class="entry"/>')
 
-				$('<span class="id"/>').text(data.id).appendTo(message)
-				$('<h1 class="message"/>').text(data.message).appendTo(message)
-				$('<div class="description"/>').text('Description: '+data.description).appendTo(message)
-
-				var expand = $('<div class="expand"/>').hide().appendTo(message)
-				$('<div class="action"/>').html('Action: '+manify(data.action)).appendTo(expand)
+				$('<span class="id"/>').text('id:'+data.id).appendTo(message)
+				$('<h2 class="message"/>').text(data.message).appendTo(message)
+				$('<div class="description"/>').html(manify(data.description)).appendTo(message)
 
 				message.appendTo('#content')
-				message.hover(
-					function () {
-						$(this).css('background-color', '#111')
-						$(this).find('.expand').slideDown(100)
-					},
-					function () {
-						$(this).css('background-color', '#000')
-						$(this).find('.expand').slideUp(100)
-					}
-				)
-			})
+			});
 
-			filterErrorMessages($('input').val())
+			filter($('input').val())
 		}, error: error
 	})
 }
