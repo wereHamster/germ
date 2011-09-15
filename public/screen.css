@@ -14,7 +14,11 @@ body {
 }
 
 a {
-  color: #797;
+  color: #DC6464;
+}
+
+a:hover {
+  color: #DC3838;
 }
 
 #container {
@@ -38,6 +42,7 @@ h1 a {
 }
 
 h1 a:hover {
+  color: #444;
   text-decoration: underline;
 }
 
@@ -49,12 +54,12 @@ h1 span {
 
 #filter {
   text-align: center;
-  padding: 15px 0 30px;
+  padding: 15px 0 15px;
 }
 
 html, body, #container { height: 100%; }
 #container { height: auto; min-height: 100%; }
-#content { padding-bottom: 4em; }
+#content { padding: 15px 0; }
 
 input {
   font-size: 18px;
@@ -102,6 +107,10 @@ input {
   color: #444;
   background-image: -webkit-linear-gradient(top, #f1f1f1, #e1e1e1);
   border-radius: 4px 4px 0 0;
+}
+
+.entry > a {
+  text-decoration: none;
 }
 
 .id {
