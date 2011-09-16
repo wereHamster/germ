@@ -183,3 +183,36 @@ input {
 .message {
   margin: 2px 0;
 }
+
+footer {
+  display: block;
+  padding: 0 10px 20px;
+  margin: 0 auto 5px;
+  color: #333;
+  text-shadow: #fff 0 1px 1px;
+  overflow: hidden;
+  font-size: 12px;
+  border-top: 1px solid #bbb;
+}
+footer > * {
+  margin-top: 5px;
+}
+footer p {
+  float: left;
+  text-align: center;
+  font-weight: 200;
+}
+footer ul {
+  float: right;
+}
+footer ul li {
+  float: left;
+  list-style: none;
+}
+footer ul li:first-child {
+  padding-right: 5px;
+}
+footer ul li span {
+  display: inline-block;
+  padding: 0 3px;
+}
