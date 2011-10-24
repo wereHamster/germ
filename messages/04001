@@ -1,0 +1,10 @@
+version:
+    1.0.0
+
+message:
+    error: failed to push some refs to '%s'
+
+description:
+    Git encountered errors while pushing commits to a remote repository. A
+    detailed error message is displayed just below this message. Use that to
+    find out the actual cause of the error.
