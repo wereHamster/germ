@@ -1,0 +1,11 @@
+version:
+    1.0.0
+
+message:
+    Refusing to fetch into current branch %s of non-bare repository
+
+description:
+    You tried to fetch commits directly into your current branch. This is
+    dangerous because the branch would diverge from your working tree and
+    you'd have a mess. Instead, fetch the branch into FETCH_HEAD or into one
+    of the remote tracking branches.

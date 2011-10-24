@@ -1,0 +1,9 @@
+version:
+    1.0.0
+
+message:
+    A branch named '%s' already exists.
+
+description:
+    A branch you tried to create already exists. Pick a different name for the
+    new branch or use `-f` to overwrite the branch.

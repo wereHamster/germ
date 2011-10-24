@@ -24,6 +24,8 @@ Here is a list of components and their IDs:
     git-add ................... 02
     git-commit ................ 03
     git-push .................. 04
+    git-fetch ................. 05
+    git-branch ................ 06
 
 
 Version
