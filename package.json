@@ -1,0 +1,4 @@
+{
+  "version": "1.0.0", "private": true, "name": "git-error-message-database",
+  "dependencies": { "express": "2.5.x", "zion": "0.0.x" }
+}
