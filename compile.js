@@ -41,3 +41,4 @@ var messages = (function() {
 })();
 
 fs.writeFileSync('./public/germ.db', JSON.stringify(messages));
+process.exit(0);
