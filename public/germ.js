@@ -53,9 +53,9 @@ $('document').ready(function() {
   __load()
 
   if (window.location.pathname.match(/\/id\/(.+)$/)) {
-    $('input').val(RegExp.$1);
+    $('input').val(decodeURIComponent(RegExp.$1));
     $('#filter').hide();
   } else if (window.location.search.match(/^\?(.+)$/)) {
-    $('input').val(RegExp.$1);
+    $('input').val(decodeURIComponent(RegExp.$1));
   }
 });

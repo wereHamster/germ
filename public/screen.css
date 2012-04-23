@@ -5,8 +5,7 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 14px;
+  font: 18px/1.4 'myriad-pro', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 200;
 
   background: url(/images/bg.tile.jpg);
@@ -30,8 +29,9 @@ a:hover {
 }
 
 h1 {
+  font-family: 'cronos-pro';
   font-weight: 100;
-  font-size: 25px;
+  font-size: 40px;
   padding: 20px 0 10px;
   border-bottom: 1px solid #bbb;
 }
@@ -47,9 +47,10 @@ h1 a:hover {
 }
 
 h1 span {
-  font-size: 35px;
+  font-size: 45px;
   letter-spacing: 2px;
   color: #B90101;
+  font-weight: 400;
 }
 
 #filter {
@@ -104,10 +105,10 @@ input {
 .entry > h2 {
   margin: 0;
   padding: 5px 10px;
-  height: 18px;
+  height: 22px;
 
-  font-weight: 200;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 18px;
   border-bottom: 1px solid #ccc;
 
   color: #444;
@@ -123,9 +124,10 @@ input {
   float: left;
 
   margin: 0 6px 0 0;
-  padding: 5px 8px;
-  height: 18px;
+  padding: 4px 8px 6px;
+  height: 22px;
 
+  font-size: 18px;
   font-weight: 200;
 
   display: inline-block;
@@ -159,6 +161,7 @@ input {
 
   position: absolute;
   top: 3px; right: 3px;
+  height: 22px;
 
   margin: 0;
   padding: 1px 6px 2px;
@@ -191,7 +194,7 @@ footer {
   color: #333;
   text-shadow: #fff 0 1px 1px;
   overflow: hidden;
-  font-size: 12px;
+  font-size: 14px;
   border-top: 1px solid #bbb;
 }
 footer > * {

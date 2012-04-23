@@ -1,0 +1,10 @@
+version:
+    1.0.0
+
+message:
+    No refs in common and none specified; doing nothing.
+
+description:
+    The local and remote repository have no refs (branches) in common, so git
+    doesn't know what to push. Specify the branch on the commandline. See also
+    `push.default` in git-config(1).
